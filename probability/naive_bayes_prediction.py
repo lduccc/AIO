@@ -106,11 +106,11 @@ def predict(predict_set, class_names, prior_probabilites, condition_probabilitie
 
 #train
 
-data, class_names = create_training_data("./traffic.txt")
+data, class_names = create_training_data("./tennis.txt")
 
 prior_probabilites, condition_probabilities, features_tag = train_naive_bayes(data, class_names)
 
-prediction, normalized_probability, class_probs = predict(['Weekday', 'Winter', 'High', 'Heavy'], 
+prediction, normalized_probability, class_probs = predict(['Rain','Cool','Normal','Weak'], 
                                                 class_names, 
                                                 prior_probabilites, 
                                                 condition_probabilities, 
